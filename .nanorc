@@ -1,0 +1,8 @@
+# nanorc files from https://github.com/scopatz/nanorc
+include "~/.nano/*.nanorc"
+set linenumbers
+set autoindent
+set tabsize 4
+set tabstospaces
+set mouse
+set softwrap
