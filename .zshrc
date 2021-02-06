@@ -34,7 +34,7 @@ export LC_ALL=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
-  export EDITOR='nano'
+  export EDITOR='code'
 fi
 
 export GPG_TTY=`tty`
