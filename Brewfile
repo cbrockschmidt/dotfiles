@@ -13,6 +13,7 @@ cask "focusrite-control"
 cask "google-chrome"
 cask "istat-menus"
 cask "iterm2"
+cask "kaleidoscope"
 cask "logitech-options"
 cask "paw"
 cask "pdf-squeezer"
@@ -25,7 +26,8 @@ cask "tableplus"
 cask "telegram"
 cask "tower"
 cask "transmit"
-mas "1Blocker", id: 1107421413
+cask "visual-studio-code"
+mas "1Blocker", id: 1365531024
 mas "Bear", id: 1091189122
 mas "Deliveries", id: 290986013
 mas "DevCleaner", id: 1388020431

@@ -1,0 +1,23 @@
+[user]
+	name = Clemens Brockschmidt
+	email = clemens.brockschmidt@gmail.com
+	signingkey = E6A5B3472B83F3EBFDE69CFD66A6DC226E0692BD
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = ~/.gitignore
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
