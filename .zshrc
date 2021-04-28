@@ -41,7 +41,7 @@ export GPG_TTY=`tty`
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias dev="cd ~/Developer/git/"
-alias pos="cd ~/Developer/git/POSApp"
+alias pos="cd ~/Developer/git/ios-apps/apps/POSApp"
 alias rpi="ssh pi@raspberrypi.local"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
