@@ -34,6 +34,7 @@ cask "telegram"
 cask "tower"
 cask "transmit"
 cask "visual-studio-code"
+cask "xcodes"
 mas "1Blocker", id: 1365531024
 mas "Bear", id: 1091189122
 mas "Deliveries", id: 290986013
@@ -47,4 +48,3 @@ mas "Pages", id: 409201541
 mas "Pi Stats", id: 1514075262
 mas "Tweetbot", id: 1384080005
 mas "Wallcat", id: 1000397973
-mas "Xcode", id: 497799835
