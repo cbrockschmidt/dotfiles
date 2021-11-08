@@ -19,7 +19,7 @@ plugins=(
   bundler
   git
   xcode
-  osx
+  macos
 )
 
 # Do not highlight pasted text
