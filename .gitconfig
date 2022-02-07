@@ -8,14 +8,21 @@
 	gpgsign = true
 [core]
 	excludesfile = ~/.gitignore
+	pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
 [diff]
 	tool = Kaleidoscope
+	colorMoved = default
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+	conflictstyle = diff3
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
