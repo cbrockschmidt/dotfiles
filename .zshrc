@@ -42,11 +42,15 @@ fi
 export GPG_TTY=`tty`
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-alias dev="cd ~/Developer/git/"
-alias pos="cd ~/Developer/git/ios-apps/apps/POSApp"
-alias rpi="ssh pi@raspberrypi.local"
+alias dev='cd ~/Developer/git/'
+alias pos='cd ~/Developer/git/ios-apps/apps/POSApp'
+alias befs='bundle exec fastlane setup'
+alias beft='bundle exec fastlane tuist_generate'
+alias rpi='ssh pi@raspberrypi.local'
+alias cat='bat --paging=never'
 alias ls='exa'
-alias la='ls --long --header --git'
+alias la='ls --all --long --header --git'
+alias l='la'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
