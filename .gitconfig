@@ -3,7 +3,7 @@
 	email = clemens.brockschmidt@gmail.com
 	signingkey = E6A5B3472B83F3EBFDE69CFD66A6DC226E0692BD
 [gpg]
-	program = /usr/local/MacGPG2/bin/gpg2
+	program = /opt/homebrew/bin/gpg
 [commit]
 	gpgsign = true
 [core]
