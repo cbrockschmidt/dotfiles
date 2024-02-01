@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -45,11 +45,12 @@ fi
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias dev='cd ~/Developer/git/'
 alias pos='cd ~/Developer/git/ios-apps/apps/POSApp'
+alias wms='cd ~/Developer/git/ios-apps/apps/WMSApp'
 alias befs='bundle exec fastlane setup'
 alias beft='bundle exec fastlane tuist_generate'
 alias rpi='ssh pi@raspberrypi.local'
 alias cat='bat --paging=never'
-alias ls='exa'
+alias ls='eza'
 alias la='ls --all --long --header --git'
 alias l='la'
 
@@ -57,7 +58,10 @@ alias l='la'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # transfer.sh
-transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2;return 1;fi;if tty -s;then file="$1";file_name=$(basename "$file");if [ ! -e "$file" ];then echo "$file: No such file or directory">&2;return 1;fi;if [ -d "$file" ];then file_name="$file_name.zip" ,;(cd "$file"&&zip -r -q - .)|curl --progress-bar --upload-file "-" "http://transfer.sh/$file_name"|tee /dev/null,;else cat "$file"|curl --progress-bar --upload-file "-" "http://transfer.sh/$file_name"|tee /dev/null;fi;else file_name=$1;curl --progress-bar --upload-file "-" "http://transfer.sh/$file_name"|tee /dev/null;fi;}
+transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2;return 1;fi;if tty -s;then file="$1";file_name=$(basename "$file");if [ ! -e "$file" ];then echo "$file: No such file or directory">&2;return 1;fi;if [ -d "$file" ];then file_name="$file_name.zip" ,;(cd "$file"&&zip -r -q - .)|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null,;else cat "$file"|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;else file_name=$1;curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;}
+
+# Add composer to $PATH
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
